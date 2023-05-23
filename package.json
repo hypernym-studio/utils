@@ -1,0 +1,60 @@
+{
+  "name": "@hypernym/utils",
+  "version": "0.0.1",
+  "author": "Hypernym Studio",
+  "description": "A collection of reusable utilities.",
+  "license": "MIT",
+  "repository": "hypernym-studio/utils",
+  "homepage": "https://github.com/hypernym-studio/utils",
+  "type": "module",
+  "module": "./dist/utils.mjs",
+  "types": "./dist/utils.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/utils.d.ts",
+      "import": "./dist/utils.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "typescript",
+    "collection",
+    "utilities",
+    "helpers",
+    "utils",
+    "types",
+    "kit"
+  ],
+  "scripts": {
+    "dev": "vite playgrounds/client",
+    "dev:node": "vite-node -w playgrounds/node/main.ts",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
+    "rollup": "^3.23.0",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5",
+    "vite-node": "^0.31.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "eslintConfig": {
+    "extends": "./.config/eslint.config.cjs"
+  },
+  "prettier": "./.config/prettier.config.cjs"
+}

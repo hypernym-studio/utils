@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+.private
+*.log*
+.cache
+.env
+.npmrc
+dist
