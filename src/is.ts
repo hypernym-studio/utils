@@ -1,3 +1,5 @@
+import type { Primitive } from './types'
+
 const getType = (v: any): string =>
   Object.prototype.toString.call(v).slice(8, -1)
 
@@ -123,3 +125,31 @@ export const isURL = (v: any): v is URL => v instanceof URL
  * Returns a boolean if the given value is a `Error`.
  */
 export const isError = (v: any): v is Error => v instanceof Error
+
+/**
+ * Returns a boolean if the given value is a `Primitive`.
+ */
+export const isPrimitive = (v: any): v is Primitive =>
+  isString(v) ||
+  isNumber(v) ||
+  isBigint(v) ||
+  isBoolean(v) ||
+  isSymbol(v) ||
+  isNull(v) ||
+  isUndefined(v)
+
+/**
+ * Returns a boolean if the given value is a `Element`.
+ */
+export const isElement = (v: any): v is Element => v instanceof Element
+
+/**
+ * Returns a boolean if the given value is a `NodeList`.
+ */
+export const isNodeList = (v: any): v is NodeList => v instanceof NodeList
+
+/**
+ * Returns a boolean if the given value is a `HTMLCollection`.
+ */
+export const isHtmlCollection = (v: any): v is HTMLCollection =>
+  v instanceof HTMLCollection
