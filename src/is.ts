@@ -149,7 +149,19 @@ export const isElement = (v: any): v is Element => v instanceof Element
 export const isNodeList = (v: any): v is NodeList => v instanceof NodeList
 
 /**
+ * Returns a boolean if the given value is an empty `NodeList`.
+ */
+export const isNodeListEmpty = (v: any): v is NodeList =>
+  isNodeList(v) && v.length === 0
+
+/**
  * Returns a boolean if the given value is a `HTMLCollection`.
  */
 export const isHtmlCollection = (v: any): v is HTMLCollection =>
   v instanceof HTMLCollection
+
+/**
+ * Returns a boolean if the given value is an empty `HTMLCollection`.
+ */
+export const isHtmlCollectionEmpty = (v: any): v is HTMLCollection =>
+  isHtmlCollection(v) && v.length === 0
