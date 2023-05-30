@@ -10,7 +10,7 @@ export type PartialDeep<
   T,
   Options extends OptionsDeep = { arrays: true }
 > = T extends BuiltIn
-  ? T
+  ? T | undefined
   : T extends Map<infer K, infer V>
   ? Map<PartialDeep<K, Options>, PartialDeep<V, Options>>
   : T extends ReadonlyMap<infer K, infer V>
@@ -32,10 +32,10 @@ export type PartialDeep<
     ? Options['arrays'] extends true
       ? V[] extends T
         ? readonly V[] extends T
-          ? ReadonlyArray<PartialDeep<V | undefined, Options>>
-          : Array<PartialDeep<V | undefined, Options>>
+          ? ReadonlyArray<PartialDeep<V, Options>>
+          : Array<PartialDeep<V, Options>>
         : PartialObjectDeep<T, Options>
-      : T
+      : T | undefined
     : PartialObjectDeep<T, Options>
   : unknown
 
