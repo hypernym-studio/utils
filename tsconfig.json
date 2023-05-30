@@ -11,6 +11,6 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"],
+  "include": ["src", "playgrounds", "test"],
   "exclude": ["node_modules", "dist"]
 }
