@@ -9,12 +9,6 @@ const getType = (v: any): string =>
 export const isClient = typeof window !== 'undefined'
 
 /**
- * An empty arrow function that performs no operation.
- */
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-export const noop = () => {}
-
-/**
  * Returns a boolean if the given value is a `null`.
  */
 export const isNull = (v: any): v is null => v === null
