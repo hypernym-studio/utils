@@ -27,6 +27,7 @@ import type { Util } from '@hypernym/utils'
 
 ## API
 
+- [`generic`](./src/generic.ts) - Useful common utilities.
 - [`is`](./src/is.ts) - Simple conditional utilities.
 
 ### Types
