@@ -1,4 +1,4 @@
-import { expectTypeOf } from 'expect-type'
+import { test, expectTypeOf } from 'vitest'
 import type { RequiredDeep } from '../../src/types'
 
 type Actual = {
@@ -118,8 +118,10 @@ type ExpectedArrays = {
   }
 }
 
-expectTypeOf<RequiredDeep<Actual>>().toEqualTypeOf<Expected>()
+test('required-deep', () => {
+  expectTypeOf<RequiredDeep<Actual>>().toEqualTypeOf<Expected>()
 
-expectTypeOf<
-  RequiredDeep<Actual, { arrays: false }>
->().toEqualTypeOf<ExpectedArrays>()
+  expectTypeOf<
+    RequiredDeep<Actual, { arrays: false }>
+  >().toEqualTypeOf<ExpectedArrays>()
+})
