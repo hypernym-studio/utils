@@ -17,37 +17,18 @@ A collection of reusable utilities.
 npm i -D @hypernym/utils
 ```
 
-## Imports
+## Usage
 
 ```ts
 // CJS
-const { util } = require('@hypernym/utils')
+const { isNull, isString, ... } = require('@hypernym/utils')
 
 // ESM & TS
-import { util } from '@hypernym/utils'
+import { isNull, isString, ... } from '@hypernym/utils'
 
 // Types
-import type { Util } from '@hypernym/utils'
+import type { IsAny, RequiredDeep, ... } from '@hypernym/utils'
 ```
-
-<sub>Rename <code>util</code> to the appropriate module, e.g., import { isString } from '@hypernym/utils' etc.</sub>
-
-## API
-
-### Utils
-
-- [`base`](./src/base.ts) - Useful common utilities.
-- [`is`](./src/is.ts) - Simple conditional utilities.
-
-### Types
-
-- [`Primitive`](./src/types/primitive.ts) - Matches any `primitive` value.
-- [`BuiltIn`](./src/types/built-in.ts) - Matches any `Primitive`, `Date` or `RegExp` value.
-- [`PartialDeep`](./src/types/partial-deep.ts) - Constructs a type by recursively setting all properties as `optional`.
-- [`RequiredDeep`](./src/types/required-deep.ts) - Constructs a type by recursively setting all properties as `required`.
-- [`IsNull`](./src/types/is.ts) - Returns a boolean if the given type is a `null`.
-- [`IsAny`](./src/types/is.ts) - Returns a boolean if the given type is a `any`.
-- [`IsNever`](./src/types/is.ts) - Returns a boolean if the given type is a `never`.
 
 ## Community
 
