@@ -1,12 +1,10 @@
+import { toString } from './base'
 import type { Primitive } from './types'
-
-const getType = (v: any): string =>
-  Object.prototype.toString.call(v).slice(8, -1)
 
 /**
  * Checks if the code is running in the browser.
  */
-export const isClient = typeof window !== 'undefined'
+export const isBrowser = typeof window !== 'undefined'
 
 /**
  * Returns a boolean if the given value is a `null`.
@@ -53,7 +51,7 @@ export const isArrayEmpty = (v: any): v is any[] => isArray(v) && v.length === 0
 /**
  * Returns a boolean if the given value is a `object`.
  */
-export const isObject = (v: any): v is object => getType(v) === 'Object'
+export const isObject = (v: any): v is object => toString(v) === 'Object'
 
 /**
  * Returns a boolean if the given value is an empty `object`.
@@ -91,7 +89,7 @@ export const isSet = (v: any): v is Set<any> => v instanceof Set
 /**
  * Returns a boolean if the given value is a `symbol`.
  */
-export const isSymbol = (v: any): v is symbol => getType(v) === 'Symbol'
+export const isSymbol = (v: any): v is symbol => toString(v) === 'Symbol'
 
 /**
  * Returns a boolean if the given value is a `Date`.

@@ -1,4 +1,4 @@
-# Utils
+# @hypernym/utils
 
 A collection of reusable utilities.
 
@@ -6,18 +6,23 @@ A collection of reusable utilities.
 
 ## Features
 
+- Supports CJS & ESM
 - TypeScript friendly
-- Zero dependencies
+- Fully tree-shakeable
+- No dependencies
 
 ## Installation
 
 ```sh
-npm i @hypernym/utils
+npm i -D @hypernym/utils
 ```
 
 ## Imports
 
 ```ts
+// CJS
+const { util } = require('@hypernym/utils')
+
 // ESM & TS
 import { util } from '@hypernym/utils'
 
@@ -25,17 +30,21 @@ import { util } from '@hypernym/utils'
 import type { Util } from '@hypernym/utils'
 ```
 
+<sub>Rename <code>util</code> to the appropriate module, e.g., import { isString } from '@hypernym/utils' etc.</sub>
+
 ## API
 
-- [`generic`](./src/generic.ts) - Useful common utilities.
+### Utils
+
+- [`base`](./src/base.ts) - Useful common utilities.
 - [`is`](./src/is.ts) - Simple conditional utilities.
 
 ### Types
 
-- [`Primitive`](./src/types/primitive.ts) - Matches any primitive value.
+- [`Primitive`](./src/types/primitive.ts) - Matches any `primitive` value.
 - [`BuiltIn`](./src/types/built-in.ts) - Matches any `Primitive`, `Date` or `RegExp` value.
-- [`PartialDeep`](./src/types/partial-deep.ts) - Constructs a type by recursively setting all properties as optional.
-- [`RequiredDeep`](./src/types/required-deep.ts) - Constructs a type by recursively setting all properties as required.
+- [`PartialDeep`](./src/types/partial-deep.ts) - Constructs a type by recursively setting all properties as `optional`.
+- [`RequiredDeep`](./src/types/required-deep.ts) - Constructs a type by recursively setting all properties as `required`.
 - [`IsNull`](./src/types/is.ts) - Returns a boolean if the given type is a `null`.
 - [`IsAny`](./src/types/is.ts) - Returns a boolean if the given type is a `any`.
 - [`IsNever`](./src/types/is.ts) - Returns a boolean if the given type is a `never`.
