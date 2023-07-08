@@ -19,10 +19,16 @@
       "types": "./dist/utils.d.ts",
       "import": "./dist/utils.mjs",
       "require": "./dist/utils.cjs"
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "import": "./dist/node.mjs",
+      "require": "./dist/node.cjs"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "*.d.ts"
   ],
   "keywords": [
     "typescript",

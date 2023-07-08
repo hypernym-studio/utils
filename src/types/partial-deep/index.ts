@@ -1,5 +1,5 @@
-import type { BuiltIn } from './built-in'
-import type { OptionsDeep } from './options-deep'
+import type { BuiltIn } from '../base'
+import type { OptionsDeep } from '../options'
 
 /**
  * Constructs a type by recursively setting all properties as optional.
