@@ -1,5 +1,6 @@
 export * from './base'
 export * from './is'
+export * from './mix'
 export * from './options'
 export * from './partial-deep'
 export * from './required-deep'
