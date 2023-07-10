@@ -13,7 +13,7 @@ const logFilter = getLogFilter(['!code:CIRCULAR_DEPENDENCY'])
 const onLog = (level, log, handler) => {
   if (logFilter(log)) handler(level, log)
 }
-const external = [/^node:/]
+const external = [/^node:/, /format-bytes/]
 
 export default defineConfig([
   {
