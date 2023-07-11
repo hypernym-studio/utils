@@ -10,14 +10,14 @@ interface FileDetails {
   base: string
   name: string
   ext: string
-  size: string
+  size: number
 }
 
 export interface DirStats {
   index: number
   path: string
   base: string
-  size: string
+  size: number
   subdirs: SubdirDetails[]
   files: FileDetails[]
 }
