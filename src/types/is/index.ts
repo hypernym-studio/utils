@@ -14,4 +14,4 @@ export type IsAny<T> = 0 extends 1 & T ? true : false
 export type IsNever<T> = [T] extends [never] ? true : false
 
 // Auto-generated
-export * from '../../is'
+export * from '../../is/index.js'

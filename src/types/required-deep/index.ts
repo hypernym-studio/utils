@@ -1,5 +1,13 @@
-import type { BuiltIn } from '../base'
-import type { OptionsDeep } from '../options'
+import type { BuiltIn } from '../base/index.js'
+
+type RequiredOptions = {
+  /**
+   * Enables recursive mode for arrays and tuples.
+   *
+   * @default true
+   */
+  readonly arrays?: boolean
+}
 
 /**
  * Constructs a type by recursively setting all properties as required.
@@ -8,7 +16,7 @@ import type { OptionsDeep } from '../options'
  */
 export type RequiredDeep<
   T,
-  Options extends OptionsDeep = { arrays: true }
+  Options extends RequiredOptions = { arrays: true },
 > = T extends BuiltIn
   ? Exclude<T, undefined>
   : T extends Map<infer K, infer V>
@@ -41,7 +49,7 @@ export type RequiredDeep<
 
 type RequiredObjectDeep<
   T extends object,
-  Options extends OptionsDeep = { arrays: true }
+  Options extends RequiredOptions = { arrays: true },
 > = {
   [K in keyof T]-?: RequiredDeep<T[K], Options>
 }

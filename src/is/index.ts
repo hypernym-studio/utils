@@ -1,5 +1,5 @@
-import { toString } from '../base'
-import type { Primitive } from '../types'
+import { toString } from '../base/index.js'
+import type { Primitive } from '../types/index.js'
 
 /**
  * Checks if the code is running in the browser.

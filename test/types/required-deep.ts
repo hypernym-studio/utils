@@ -1,5 +1,5 @@
 import { test, expectTypeOf } from 'vitest'
-import type { RequiredDeep } from '../../src/types'
+import type { RequiredDeep } from '../../src/types/index.js'
 
 type Actual = {
   null?: null | undefined

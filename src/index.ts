@@ -1,3 +1,2 @@
-export * from './base'
-export * from './is'
-export * from './mix'
+export * from './base/index.js'
+export * from './is/index.js'
