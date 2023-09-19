@@ -1,16 +1,4 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "skipLibCheck": true,
-    "strict": true,
-    "allowJs": true,
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["src", "playgrounds", "test"],
-  "exclude": ["node_modules", "dist"]
+  "extends": "@hypernym/tsconfig",
+  "include": ["src/**/*", "playgrounds/**/*", "test/**/*", "rolli.config.js"]
 }
