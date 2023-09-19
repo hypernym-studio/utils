@@ -2,33 +2,24 @@
   "name": "@hypernym/utils",
   "version": "1.2.0",
   "author": "Hypernym Studio",
-  "maintainers": [
-    "Ivo Dolenc (https://github.com/ivodolenc)"
-  ],
   "description": "A collection of reusable utilities.",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/ivodolenc",
   "repository": "hypernym-studio/utils",
   "homepage": "https://github.com/hypernym-studio/utils",
+  "funding": "https://github.com/sponsors/ivodolenc",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.mjs"
     },
     "./node": {
-      "types": "./dist/node/index.d.ts",
-      "import": "./dist/node/index.mjs",
-      "require": "./dist/node/index.cjs"
+      "types": "./dist/types/node/index.d.ts",
+      "import": "./dist/node/index.mjs"
     }
   },
   "files": [
-    "dist",
-    "*.d.ts"
+    "dist"
   ],
   "keywords": [
     "typescript",
@@ -42,32 +33,26 @@
   "scripts": {
     "dev": "vite playgrounds/client",
     "dev:node": "vite-node -w playgrounds/node/main.ts",
-    "build": "rollup -c ./.config/rollup.config.js",
+    "build": "rolli",
+    "bump": "bummp",
     "test:types": "vitest -c ./.config/vitest.config.ts typecheck",
-    "prepublishOnly": "npm run build",
-    "format": "prettier --write .",
-    "lint": "eslint .",
-    "fix": "eslint --fix ."
+    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js .",
+    "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js --fix .",
+    "format": "prettier --config .config/prettier.config.js --write .",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@hypernym/eslint-config": "^1.0.1",
-    "@hypernym/prettier-config": "^1.0.1",
-    "@types/node": "^20.4.1",
-    "eslint": "^8.44.0",
-    "prettier": "^2.8.8",
-    "rollup": "^3.26.2",
-    "rollup-plugin-dts": "^5.3.0",
-    "rollup-plugin-esbuild": "^5.0.0",
-    "typescript": "^5.0.4",
-    "vite": "^4.4.3",
-    "vite-node": "^0.33.0",
-    "vitest": "^0.33.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "eslintConfig": {
-    "extends": "./.config/eslint.config.cjs"
-  },
-  "prettier": "@hypernym/prettier-config"
+    "@hypernym/eslint-config": "^2.0.0",
+    "@hypernym/prettier-config": "^2.0.0",
+    "@hypernym/tsconfig": "^1.0.1",
+    "@types/node": "^20.6.2",
+    "bummp": "^0.2.0",
+    "eslint": "^8.49.0",
+    "prettier": "^3.0.3",
+    "rolli": "^0.6.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vite-node": "^0.34.4",
+    "vitest": "^0.34.4"
+  }
 }
