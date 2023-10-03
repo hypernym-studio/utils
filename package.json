@@ -22,37 +22,36 @@
     "dist"
   ],
   "keywords": [
+    "javascript",
     "typescript",
     "collection",
     "utilities",
     "helpers",
     "utils",
     "types",
-    "kit"
+    "kit",
+    "js",
+    "ts"
   ],
   "scripts": {
     "dev": "vite playgrounds/client",
     "dev:node": "vite-node -w playgrounds/node/main.ts",
     "build": "rolli",
-    "bump": "bummp",
-    "test:types": "vitest -c ./.config/vitest.config.ts typecheck",
+    "test:types": "vitest -c .config/vitest.config.ts typecheck",
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js .",
     "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js --fix .",
     "format": "prettier --config .config/prettier.config.js --write .",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@hypernym/eslint-config": "^2.0.0",
-    "@hypernym/prettier-config": "^2.0.0",
+    "@hypernym/eslint-config": "^2.0.1",
+    "@hypernym/prettier-config": "^2.0.1",
     "@hypernym/tsconfig": "^1.0.1",
-    "@types/node": "^20.6.3",
-    "bummp": "^0.2.0",
-    "eslint": "^8.49.0",
+    "@types/node": "^20.8.2",
+    "eslint": "^8.50.0",
     "prettier": "^3.0.3",
     "rolli": "^0.7.0",
     "typescript": "^5.1.6",
-    "vite": "^4.4.9",
-    "vite-node": "^0.34.4",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.6"
   }
 }
