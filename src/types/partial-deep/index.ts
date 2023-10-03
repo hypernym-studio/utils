@@ -24,13 +24,13 @@ export type PartialDeep<
   : T extends ReadonlyMap<infer K, infer V>
   ? ReadonlyMap<PartialDeep<K, Options>, PartialDeep<V, Options>>
   : T extends WeakMap<infer K, infer V>
-  ? WeakMap<PartialDeep<K, Options>, PartialDeep<V, Options>>
+  ? WeakMap<Partial<K>, PartialDeep<V, Options>>
   : T extends Set<infer V>
   ? Set<PartialDeep<V, Options>>
   : T extends ReadonlySet<infer V>
   ? ReadonlySet<PartialDeep<V, Options>>
   : T extends WeakSet<infer V>
-  ? WeakSet<PartialDeep<V, Options>>
+  ? WeakSet<Partial<V>>
   : T extends Promise<infer V>
   ? Promise<PartialDeep<V, Options>>
   : T extends (...args: any[]) => unknown
