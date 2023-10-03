@@ -5,7 +5,7 @@ A collection of reusable utilities.
 <sub><a href="https://github.com/hypernym-studio/utils">Repository</a> | <a href="https://www.npmjs.com/package/@hypernym/utils">Package</a> | <a href="https://github.com/hypernym-studio/utils/releases">Releases</a> | <a href="https://github.com/hypernym-studio/utils/discussions">Discussions</a></sub>
 
 ```sh
-npm i -D @hypernym/utils
+npm i @hypernym/utils
 ```
 
 ## Features
