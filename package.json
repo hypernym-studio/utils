@@ -13,9 +13,13 @@
       "types": "./dist/types/index.d.ts",
       "import": "./dist/index.mjs"
     },
+    "./fs": {
+      "types": "./dist/types/fs/index.d.ts",
+      "import": "./dist/fs/index.mjs"
+    },
     "./node": {
-      "types": "./dist/types/node/index.d.ts",
-      "import": "./dist/node/index.mjs"
+      "types": "./dist/types/fs/index.d.ts",
+      "import": "./dist/fs/index.mjs"
     }
   },
   "files": [
@@ -36,7 +40,7 @@
   "scripts": {
     "dev": "vite playgrounds/client",
     "dev:node": "vite-node -w playgrounds/node/main.ts",
-    "build": "rolli",
+    "build": "hyperbundler",
     "test:types": "vitest -c .config/vitest.config.ts typecheck",
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js .",
     "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js --fix .",
@@ -44,13 +48,13 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "@hypernym/bundler": "^0.1.2",
     "@hypernym/eslint-config": "^2.0.1",
     "@hypernym/prettier-config": "^2.0.1",
     "@hypernym/tsconfig": "^1.1.0",
-    "@types/node": "^20.8.2",
-    "eslint": "^8.50.0",
+    "@types/node": "^20.8.4",
+    "eslint": "^8.51.0",
     "prettier": "^3.0.3",
-    "rolli": "^0.7.0",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
   }
