@@ -1,4 +1,4 @@
 {
   "extends": "@hypernym/tsconfig",
-  "include": ["src/**/*", "playgrounds/**/*", "test/**/*", "rolli.config.js"]
+  "include": ["src/**/*", "playgrounds/**/*", "test/**/*", "bundler.config.ts"]
 }
