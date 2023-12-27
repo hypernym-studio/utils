@@ -41,21 +41,21 @@
     "dev": "vite playgrounds/client",
     "dev:node": "vite-node -w playgrounds/node/main.ts",
     "build": "hyperbundler",
-    "test:types": "vitest -c .config/vitest.config.ts typecheck",
+    "test:types": "vitest -c .config/vitest.config.ts --typecheck.only",
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js .",
     "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js --fix .",
     "format": "prettier --config .config/prettier.config.js --write .",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@hypernym/bundler": "^0.1.2",
-    "@hypernym/eslint-config": "^2.0.1",
-    "@hypernym/prettier-config": "^2.0.1",
+    "@hypernym/bundler": "^0.6.3",
+    "@hypernym/eslint-config": "^2.0.3",
+    "@hypernym/prettier-config": "^2.0.3",
     "@hypernym/tsconfig": "^1.1.0",
-    "@types/node": "^20.8.4",
-    "eslint": "^8.51.0",
-    "prettier": "^3.0.3",
-    "typescript": "^5.2.2",
-    "vitest": "^0.34.6"
+    "@types/node": "^20.10.5",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
   }
 }
