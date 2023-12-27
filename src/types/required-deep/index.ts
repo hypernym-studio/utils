@@ -20,32 +20,36 @@ export type RequiredDeep<
 > = T extends BuiltIn
   ? Exclude<T, undefined>
   : T extends Map<infer K, infer V>
-  ? Map<RequiredDeep<K, Options>, RequiredDeep<V, Options>>
-  : T extends ReadonlyMap<infer K, infer V>
-  ? ReadonlyMap<RequiredDeep<K, Options>, RequiredDeep<V, Options>>
-  : T extends WeakMap<infer K, infer V>
-  ? WeakMap<RequiredDeep<K, Options>, RequiredDeep<V, Options>>
-  : T extends Set<infer V>
-  ? Set<RequiredDeep<V, Options>>
-  : T extends ReadonlySet<infer V>
-  ? ReadonlySet<RequiredDeep<V, Options>>
-  : T extends WeakSet<infer V>
-  ? WeakSet<RequiredDeep<V, Options>>
-  : T extends Promise<infer V>
-  ? Promise<RequiredDeep<V, Options>>
-  : T extends (...args: any[]) => unknown
-  ? Exclude<T, undefined>
-  : T extends object
-  ? T extends ReadonlyArray<infer V>
-    ? Options['arrays'] extends true
-      ? V[] extends T
-        ? readonly V[] extends T
-          ? ReadonlyArray<RequiredDeep<Exclude<V, undefined>, Options>>
-          : Array<RequiredDeep<Exclude<V, undefined>, Options>>
-        : RequiredObjectDeep<T, Options>
-      : Exclude<T, undefined>
-    : RequiredObjectDeep<T, Options>
-  : unknown
+    ? Map<RequiredDeep<K, Options>, RequiredDeep<V, Options>>
+    : T extends ReadonlyMap<infer K, infer V>
+      ? ReadonlyMap<RequiredDeep<K, Options>, RequiredDeep<V, Options>>
+      : T extends WeakMap<infer K, infer V>
+        ? WeakMap<RequiredDeep<K, Options>, RequiredDeep<V, Options>>
+        : T extends Set<infer V>
+          ? Set<RequiredDeep<V, Options>>
+          : T extends ReadonlySet<infer V>
+            ? ReadonlySet<RequiredDeep<V, Options>>
+            : T extends WeakSet<infer V>
+              ? WeakSet<RequiredDeep<V, Options>>
+              : T extends Promise<infer V>
+                ? Promise<RequiredDeep<V, Options>>
+                : T extends (...args: any[]) => unknown
+                  ? Exclude<T, undefined>
+                  : T extends object
+                    ? T extends ReadonlyArray<infer V>
+                      ? Options['arrays'] extends true
+                        ? V[] extends T
+                          ? readonly V[] extends T
+                            ? ReadonlyArray<
+                                RequiredDeep<Exclude<V, undefined>, Options>
+                              >
+                            : Array<
+                                RequiredDeep<Exclude<V, undefined>, Options>
+                              >
+                          : RequiredObjectDeep<T, Options>
+                        : Exclude<T, undefined>
+                      : RequiredObjectDeep<T, Options>
+                    : unknown
 
 type RequiredObjectDeep<
   T extends object,
