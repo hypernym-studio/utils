@@ -33,6 +33,16 @@ export const isStringEmpty = (v: any): v is string =>
 export const isBoolean = (v: any): v is boolean => typeof v === 'boolean'
 
 /**
+ * Returns a boolean if the given value is a `false`.
+ */
+export const isFalse = (v: any): v is false => v === false
+
+/**
+ * Returns a boolean if the given value is a `true`.
+ */
+export const isTrue = (v: any): v is true => v === true
+
+/**
  * Returns a boolean if the given value is a `number`.
  */
 export const isNumber = (v: any): v is number =>
@@ -134,6 +144,17 @@ export const isPrimitive = (v: any): v is Primitive =>
  * Returns a boolean if the given value is a `Element`.
  */
 export const isElement = (v: any): v is Element => v instanceof Element
+
+/**
+ * Returns a boolean if the given value is a `HTMLElement`.
+ */
+export const isHtmlElement = (v: any): v is HTMLElement =>
+  v instanceof HTMLElement
+
+/**
+ * Returns a boolean if the given value is a `SVGElement`.
+ */
+export const isSvgElement = (v: any): v is SVGElement => v instanceof SVGElement
 
 /**
  * Returns a boolean if the given value is a `NodeList`.
