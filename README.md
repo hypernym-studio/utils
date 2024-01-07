@@ -1,4 +1,4 @@
-# @hypernym/utils
+# Utils
 
 A collection of reusable utilities.
 
@@ -26,11 +26,17 @@ import type { IsAny, RequiredDeep, ... } from '@hypernym/utils'
 
 ## Community
 
-Feel free to use the official [discussions](https://github.com/hypernym-studio/utils/discussions) for any additional questions.
+Feel free to ask questions or share new ideas.
+
+Use the official [discussions](https://github.com/hypernym-studio/utils/discussions) to get involved.
+
+## Contributing
+
+Check out the [guide](.github/CONTRIBUTING.md) for more info.
 
 ## License
 
-Developed in 🇭🇷 Croatia
+Developed in 🇭🇷 Croatia.
 
 Released under the [MIT](LICENSE.txt) license.
 
