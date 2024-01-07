@@ -3,14 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/main.css" />
     <title>Playground</title>
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #151515;
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
-    <div>
+    <main>
       <h1>Playground</h1>
-    </div>
-
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
