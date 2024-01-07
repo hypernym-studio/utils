@@ -31,6 +31,7 @@
     "collection",
     "utilities",
     "helpers",
+    "shared",
     "utils",
     "types",
     "kit",
@@ -38,7 +39,7 @@
     "ts"
   ],
   "scripts": {
-    "dev": "vite playgrounds/client",
+    "dev:browser": "vite playgrounds/browser",
     "dev:node": "vite-node -w playgrounds/node/main.ts",
     "build": "hyperbundler",
     "test:types": "vitest -c .config/vitest.config.ts --typecheck.only",
@@ -47,15 +48,31 @@
     "format": "prettier --config .config/prettier.config.js --write .",
     "prepublishOnly": "npm run build"
   },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=v18.0.0"
+  },
+  "peerDependencies": {
+    "@types/node": ">=20.0.0",
+    "typescript": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/node": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@hypernym/bundler": "^0.6.3",
     "@hypernym/eslint-config": "^2.0.3",
     "@hypernym/prettier-config": "^2.0.3",
     "@hypernym/tsconfig": "^1.1.0",
-    "@types/node": "^20.10.5",
+    "@types/node": "^20.10.6",
     "eslint": "^8.56.0",
     "prettier": "^3.1.1",
     "typescript": "^5.3.3",
-    "vitest": "^1.1.0"
+    "vitest": "^1.1.3"
   }
 }
