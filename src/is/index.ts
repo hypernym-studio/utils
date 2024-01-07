@@ -33,14 +33,14 @@ export const isStringEmpty = (v: any): v is string =>
 export const isBoolean = (v: any): v is boolean => typeof v === 'boolean'
 
 /**
- * Returns a boolean if the given value is a `false`.
- */
-export const isFalse = (v: any): v is false => v === false
-
-/**
  * Returns a boolean if the given value is a `true`.
  */
 export const isTrue = (v: any): v is true => v === true
+
+/**
+ * Returns a boolean if the given value is a `false`.
+ */
+export const isFalse = (v: any): v is false => v === false
 
 /**
  * Returns a boolean if the given value is a `number`.
@@ -87,14 +87,25 @@ export const isNaNValue = (v: any): v is typeof NaN =>
 export const isRegExp = (v: any): v is RegExp => v instanceof RegExp
 
 /**
- * Returns a boolean if the given value is a `map`.
+ * Returns a boolean if the given value is a `Map`.
  */
 export const isMap = (v: any): v is Map<any, any> => v instanceof Map
 
 /**
- * Returns a boolean if the given value is a `set`.
+ * Returns a boolean if the given value is a `WeakMap`.
+ */
+export const isWeakMap = (v: any): v is WeakMap<any, any> =>
+  v instanceof WeakMap
+
+/**
+ * Returns a boolean if the given value is a `Set`.
  */
 export const isSet = (v: any): v is Set<any> => v instanceof Set
+
+/**
+ * Returns a boolean if the given value is a `WeakSet`.
+ */
+export const isWeakSet = (v: any): v is WeakSet<any> => v instanceof WeakSet
 
 /**
  * Returns a boolean if the given value is a `symbol`.
