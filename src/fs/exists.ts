@@ -6,13 +6,7 @@ import { access, constants } from 'node:fs/promises'
  * @example
  *
  * ```ts
- * // New import
  * import { exists } from '@hypernym/utils/fs'
- * ```
- *
- * ```ts
- * // Deprecated import
- * import { exists } from '@hypernym/utils/node'
  * ```
  */
 export async function exists(path: string) {
