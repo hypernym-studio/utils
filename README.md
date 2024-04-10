@@ -1,4 +1,4 @@
-# Utils
+# @hypernym/utils
 
 A collection of reusable utilities.
 
@@ -29,10 +29,6 @@ import type { IsAny, RequiredDeep, ... } from '@hypernym/utils'
 Feel free to ask questions or share new ideas.
 
 Use the official [discussions](https://github.com/hypernym-studio/utils/discussions) to get involved.
-
-## Contributing
-
-Check out the [guide](.github/CONTRIBUTING.md) for more info.
 
 ## License
 
