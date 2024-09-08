@@ -36,17 +36,19 @@
   ],
   "scripts": {
     "dev:browser": "vite playgrounds/browser",
-    "dev:node": "vite-node -w playgrounds/node/main.ts",
+    "dev:server": "bun --watch playgrounds/server/main.ts",
     "build": "hyperbundler",
-    "test:types": "vitest -c .config/vitest.config.ts --typecheck.only",
-    "lint": "eslint -c .config/eslint.config.js .",
-    "lint:fix": "eslint -c .config/eslint.config.js --fix .",
-    "format": "prettier --config .config/prettier.config.js --write .",
+    "test:types": "vitest --typecheck.only",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
     "prepublishOnly": "npm run build"
   },
   "sideEffects": false,
+  "packageManager": "pnpm@9.9.0",
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
   },
   "peerDependencies": {
     "@types/node": ">=20.0.0",
@@ -61,14 +63,14 @@
     }
   },
   "devDependencies": {
-    "@hypernym/bundler": "^0.8.1",
-    "@hypernym/eslint-config": "^3.0.0",
-    "@hypernym/prettier-config": "^3.0.0",
-    "@hypernym/tsconfig": "^2.0.0",
-    "@types/node": "^20.12.7",
-    "eslint": "^9.0.0",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.4",
-    "vitest": "^1.4.0"
+    "@hypernym/bundler": "^0.10.0",
+    "@hypernym/eslint-config": "^3.5.0",
+    "@hypernym/prettier-config": "^3.2.0",
+    "@hypernym/tsconfig": "^2.3.0",
+    "@types/node": "^20.16.5",
+    "eslint": "^9.10.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   }
 }
