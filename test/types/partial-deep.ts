@@ -1,5 +1,5 @@
 import { test, expectTypeOf } from 'vitest'
-import type { PartialDeep } from '../../src/types/index.js'
+import type { PartialDeep } from '@/types'
 
 type Actual = {
   null: null
