@@ -15,5 +15,4 @@ export type Primitive =
  */
 export type BuiltIn = Primitive | Date | RegExp
 
-// Auto-generated
-export * from '../../base/index.js'
+export * from '@/base'

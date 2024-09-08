@@ -8,13 +8,15 @@ import { mkdir, writeFile as write } from 'node:fs/promises'
  *
  * ```ts
  * import { writeFile } from '@hypernym/utils/fs'
+ *
+ * writeFile('dir/subdir/file.ts', `console.log('Hello World!')`)
  * ```
  */
 export async function writeFile(
   path: string,
   data: Parameters<typeof write>[1],
   options?: Parameters<typeof write>[2],
-) {
+): Promise<void> {
   await mkdir(dirname(path), { recursive: true })
 
   return await write(path, data, options)

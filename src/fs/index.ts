@@ -1,2 +1,2 @@
-export * from './exists.js'
-export * from './write-file.js'
+export * from './exists'
+export * from './write-file'

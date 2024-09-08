@@ -7,9 +7,11 @@ import { access, constants } from 'node:fs/promises'
  *
  * ```ts
  * import { exists } from '@hypernym/utils/fs'
+ *
+ * exists('dir/file.ts') // => true
  * ```
  */
-export async function exists(path: string) {
+export async function exists(path: string): Promise<boolean> {
   return await access(path, constants.F_OK)
     .then(() => true)
     .catch(() => false)

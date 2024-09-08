@@ -1,4 +1,4 @@
-import type { BuiltIn } from '../base/index.js'
+import type { BuiltIn } from '../base'
 
 type PartialOptions = {
   /**
