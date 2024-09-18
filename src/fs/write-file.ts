@@ -9,7 +9,7 @@ import { mkdir, writeFile as write } from 'node:fs/promises'
  * ```ts
  * import { writeFile } from '@hypernym/utils/fs'
  *
- * writeFile('dir/subdir/file.ts', `console.log('Hello World!')`)
+ * await writeFile('dir/subdir/file.ts', `console.log('Hello World!')`)
  * ```
  */
 export async function writeFile(
