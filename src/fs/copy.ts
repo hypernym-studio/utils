@@ -34,7 +34,7 @@ export interface CopyOptions {
 export async function copy(
   source: string | URL | (string | URL)[],
   destination: string | URL,
-  options: CopyOptions,
+  options: CopyOptions = {},
 ): Promise<void> {
   const { recursive = true, filter } = options
 
