@@ -1,6 +1,9 @@
 import { cp } from 'node:fs/promises'
 import { isString, isURL } from '@'
 
+export type CopySource = string | URL
+export type CopyDestination = string | URL
+
 export interface CopyOptions {
   /**
    * Copies files or directories recursively.
@@ -32,8 +35,8 @@ export interface CopyOptions {
  * ```
  */
 export async function copy(
-  source: string | URL | (string | URL)[],
-  destination: string | URL,
+  source: CopySource | CopySource[],
+  destination: CopyDestination,
   options: CopyOptions = {},
 ): Promise<void> {
   const { recursive = true, filter } = options
