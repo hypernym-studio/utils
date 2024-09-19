@@ -77,7 +77,7 @@ Also, it is possible to download files manually and serve them accordingly.
 
 ### isBrowser
 
-Checks if the code is running in the browser.
+Checks if the code is running in the `browser`.
 
 ```ts
 import { isBrowser } from '@hypernym/utils'
@@ -125,6 +125,16 @@ Checks if the file or directory exists.
 import { exists } from '@hypernym/utils/fs'
 
 await exists('dir/file.ts') // => true
+```
+
+### read
+
+Reads the entire contents of a file.
+
+```ts
+import { read } from '@hypernym/utils/fs'
+
+await read('dir/subdir/file.ts')
 ```
 
 ### write
