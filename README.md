@@ -14,7 +14,9 @@
 
 <pre align="center">pnpm add @hypernym/utils</pre>
 
-<h4 align="center">Hypernym Studio</h4>
+<p align="center">
+  <strong>Hypernym Studio</strong>
+</p>
 
 <br>
 
@@ -26,12 +28,177 @@
 
 ## Usage
 
+After installation, import `Hyperutils` into your project:
+
 ```ts
 // ESM & TS
 import { isNull, isString, ... } from '@hypernym/utils'
 
+// ESM & TS
+import { exists, copy, ... } from '@hypernym/utils/fs'
+
 // Types
 import type { IsAny, RequiredDeep, ... } from '@hypernym/utils'
+```
+
+## CDN
+
+Here are some examples of how to integrate **Hyperutils** from a CDN via a script tag.
+
+Also, it is possible to download files manually and serve them accordingly.
+
+#### minified esm
+
+```html
+<script type="module">
+  import { isNull, isString, ... } from 'https://unpkg.com/@hypernym/utils/dist/index.min.mjs'
+</script>
+```
+
+#### minified iief
+
+```html
+<script src="https://unpkg.com/@hypernym/utils/dist/index.iief.mjs"></script>
+<script>
+  const { isNull, isString, ... } = Hyperutils
+</script>
+```
+
+#### minified umd
+
+```html
+<script src="https://unpkg.com/@hypernym/utils/dist/index.umd.mjs"></script>
+<script>
+  const { isNull, isString, ... } = Hyperutils
+</script>
+```
+
+## is
+
+### isBrowser
+
+Checks if the code is running in the browser.
+
+```ts
+import { isBrowser } from '@hypernym/utils'
+
+isBrowser // true
+```
+
+### isNull
+
+Returns a boolean if the given value is a `null`.
+
+```ts
+import { isNull } from '@hypernym/utils'
+
+isNull(null) // => true
+```
+
+### isUndefined
+
+Returns a boolean if the given value is a `undefined`.
+
+```ts
+import { isUndefined } from '@hypernym/utils'
+
+isUndefined(undefined) // => true
+```
+
+### isString
+
+Returns a boolean if the given value is a `string`.
+
+```ts
+import { isString } from '@hypernym/utils'
+
+isString('@hypernym/utils') // => true
+```
+
+## fs
+
+### exists
+
+Checks if the file or directory exists.
+
+```ts
+import { exists } from '@hypernym/utils/fs'
+
+await exists('dir/file.ts') // => true
+```
+
+### write
+
+Writes data to a file recursively.
+
+```ts
+import { write } from '@hypernym/utils/fs'
+
+await write('dir/subdir/file.ts', `console.log('Hello World!')`)
+```
+
+### copy
+
+Copies `files` or `directories` recursively.
+
+Accepts a single source or a range of sources.
+
+```ts
+import { copy } from '@hypernym/utils/fs'
+
+await copy('src/subdir/file.ts', './dist/subdir')
+```
+
+### mkdir
+
+Creates a `directory` recursively.
+
+Accepts a single path or a range of paths.
+
+```ts
+import { mkdir } from '@hypernym/utils/fs'
+
+await mkdir('src/subdir')
+```
+
+### remove
+
+Removes `files` and `directories` recursively.
+
+Accepts a single path or a range of paths.
+
+```ts
+import { remove } from '@hypernym/utils/fs'
+
+await remove('src/subdir/file.ts')
+```
+
+## Types
+
+### PartialDeep
+
+Constructs a type by recursively setting all properties as optional.
+
+Use `Partial<T>` for one level.
+
+```ts
+type PartialObject = PartialDeep<Object>
+
+// Disables recursive mode for arrays and tuples.
+type PartialObject = PartialDeep<Object, { arrays: false }>
+```
+
+### RequiredDeep
+
+Constructs a type by recursively setting all properties as required.
+
+Use `Required<T>` for one level.
+
+```ts
+type RequiredObject = RequiredDeep<Object>
+
+// Disables recursive mode for arrays and tuples.
+type RequiredObject = RequiredDeep<Object, { arrays: false }>
 ```
 
 ## Community
