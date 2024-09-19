@@ -37,11 +37,11 @@ export async function mkdir(
   path: MakeDirPath | MakeDirPath[],
   options: MakeDirOptions = {},
 ): Promise<void> {
-  const { recursive = true } = options
+  const { recursive = true, mode } = options
 
   const paths = isString(path) || isURL(path) ? [path] : path
 
   for (const p of paths) {
-    await makedir(p, { recursive })
+    await makedir(p, { recursive, mode })
   }
 }
