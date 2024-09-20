@@ -6,7 +6,7 @@ import { isURL } from '@'
 export type WritePath = string | URL
 
 /**
- * Writes data to a file recursively.
+ * Writes data to a `file` recursively.
  *
  * @example
  *

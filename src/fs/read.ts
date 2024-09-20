@@ -30,7 +30,7 @@ export interface ReadOptions<T extends ReadEncodingType> {
 }
 
 /**
- * Reads the entire contents of a file.
+ * Reads the entire contents of a `file`.
  *
  * @example
  *
