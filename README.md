@@ -119,7 +119,7 @@ isString('@hypernym/utils') // => true
 
 ### exists
 
-Checks if the file or directory exists.
+Checks if the `file` or `directory` exists.
 
 ```ts
 import { exists } from '@hypernym/utils/fs'
@@ -129,7 +129,7 @@ await exists('dir/file.ts') // => true
 
 ### read
 
-Reads the entire contents of a file.
+Reads the entire contents of a `file`.
 
 ```ts
 import { read } from '@hypernym/utils/fs'
@@ -137,9 +137,19 @@ import { read } from '@hypernym/utils/fs'
 await read('dir/subdir/file.ts')
 ```
 
+### readdir
+
+Reads the contents of a `directory` recursively.
+
+```ts
+import { readdir } from '@hypernym/utils/fs'
+
+await readdir('dir/subdir')
+```
+
 ### write
 
-Writes data to a file recursively.
+Writes data to a `file` recursively.
 
 ```ts
 import { write } from '@hypernym/utils/fs'

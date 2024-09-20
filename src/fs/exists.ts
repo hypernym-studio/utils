@@ -1,7 +1,7 @@
 import { access, constants } from 'node:fs/promises'
 
 /**
- * Checks if the file or directory exists.
+ * Checks if the `file` or `directory` exists.
  *
  * @example
  *
