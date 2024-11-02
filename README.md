@@ -1,22 +1,20 @@
-<h1 align="center">Hyperutils</h1>
+<h1 align="center">Hypernym Utils</h1>
 
 <p align="center">A collection of reusable utilities.</p>
 
 <p align="center">
   <a href="https://github.com/hypernym-studio/utils">Repository</a>
-  <span>+</span>
+  <span>✦</span>
   <a href="https://www.npmjs.com/package/@hypernym/utils">Package</a>
-  <span>+</span>
+  <span>✦</span>
   <a href="https://github.com/hypernym-studio/utils/releases">Releases</a>
-  <span>+</span>
+  <span>✦</span>
   <a href="https://github.com/hypernym-studio/utils/discussions">Discussions</a>
 </p>
 
-<pre align="center">pnpm add @hypernym/utils</pre>
+<br>
 
-<p align="center">
-  <strong>Hypernym Studio</strong>
-</p>
+<pre align="center">pnpm add @hypernym/utils</pre>
 
 <br>
 
