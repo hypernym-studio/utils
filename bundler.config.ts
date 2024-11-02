@@ -1,4 +1,4 @@
-import { defineConfig, replacePath } from '@hypernym/bundler'
+import { defineConfig, resolvePaths } from '@hypernym/bundler'
 
 export default defineConfig({
   entries: [
@@ -6,28 +6,28 @@ export default defineConfig({
     {
       input: './src/index.ts',
       output: './dist/index.min.mjs',
-      transformers: { esbuild: { minify: true } },
+      minify: true,
     },
     {
       input: './src/index.ts',
       output: './dist/index.iife.js',
-      transformers: { esbuild: { minify: true } },
       format: 'iife',
       name: 'Hyperutils',
+      minify: true,
     },
     {
       input: './src/index.ts',
       output: './dist/index.umd.js',
-      transformers: { esbuild: { minify: true } },
       format: 'umd',
       name: 'Hyperutils',
+      minify: true,
     },
-    { declaration: './src/types/index.ts' },
+    { dts: './src/types/index.ts' },
     {
       input: './src/fs/index.ts',
       externals: [/^node/, /^@/],
-      paths: (id) => replacePath(/^@/, '../index.mjs')(id),
+      paths: resolvePaths([{ find: /^@/, replacement: '../index.mjs' }]),
     },
-    { declaration: './src/types/fs/index.ts' },
+    { dts: './src/types/fs/index.ts' },
   ],
 })
