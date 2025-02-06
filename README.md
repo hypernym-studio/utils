@@ -1,4 +1,4 @@
-<h1 align="center">Hypernym Utils</h1>
+<h1 align="center">Utils</h1>
 
 <p align="center">A collection of reusable utilities.</p>
 
@@ -24,6 +24,52 @@
 - Fully tree-shakeable
 - No dependencies
 
+## Installation
+
+Install `@hypernym/utils` package:
+
+```sh
+# via pnpm
+pnpm add @hypernym/utils
+```
+
+```sh
+# via npm
+npm install @hypernym/utils
+```
+
+### CDN
+
+Here are some examples of how to integrate **Hyperutils** from a CDN via a script tag.
+
+Also, it is possible to download files manually and serve them accordingly.
+
+#### ESM (minified)
+
+```html
+<script type="module">
+  import { isNull, isString, ... } from 'https://unpkg.com/@hypernym/utils/dist/index.min.mjs'
+</script>
+```
+
+#### IIFE (minified)
+
+```html
+<script src="https://unpkg.com/@hypernym/utils/dist/index.iife.js"></script>
+<script>
+  const { isNull, isString, ... } = Hyperutils
+</script>
+```
+
+#### UMD (minified)
+
+```html
+<script src="https://unpkg.com/@hypernym/utils/dist/index.umd.js"></script>
+<script>
+  const { isNull, isString, ... } = Hyperutils
+</script>
+```
+
 ## Usage
 
 After installation, import `Hyperutils` into your project:
@@ -37,38 +83,6 @@ import { exists, copy, ... } from '@hypernym/utils/fs'
 
 // Types
 import type { IsAny, RequiredDeep, ... } from '@hypernym/utils'
-```
-
-## CDN
-
-Here are some examples of how to integrate **Hyperutils** from a CDN via a script tag.
-
-Also, it is possible to download files manually and serve them accordingly.
-
-#### minified esm
-
-```html
-<script type="module">
-  import { isNull, isString, ... } from 'https://unpkg.com/@hypernym/utils/dist/index.min.mjs'
-</script>
-```
-
-#### minified iief
-
-```html
-<script src="https://unpkg.com/@hypernym/utils/dist/index.iief.mjs"></script>
-<script>
-  const { isNull, isString, ... } = Hyperutils
-</script>
-```
-
-#### minified umd
-
-```html
-<script src="https://unpkg.com/@hypernym/utils/dist/index.umd.mjs"></script>
-<script>
-  const { isNull, isString, ... } = Hyperutils
-</script>
 ```
 
 ## is
