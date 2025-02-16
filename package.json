@@ -38,14 +38,14 @@
     "dev:browser": "vite playgrounds/browser",
     "dev:server": "bun --watch playgrounds/server/main.ts",
     "build": "hyperbundler",
-    "test:types": "vitest --typecheck.only",
+    "test": "vitest -c test/vitest.config.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
     "prepublishOnly": "npm run build"
   },
   "sideEffects": false,
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@10.4.0",
   "engines": {
     "node": ">=20.0.0",
     "pnpm": ">=9.0.0"
@@ -63,14 +63,14 @@
     }
   },
   "devDependencies": {
-    "@hypernym/bundler": "^0.14.0",
-    "@hypernym/eslint-config": "^3.5.1",
-    "@hypernym/prettier-config": "^3.2.0",
-    "@hypernym/tsconfig": "^2.4.0",
-    "@types/node": "^22.8.6",
-    "eslint": "^9.14.0",
-    "prettier": "^3.3.3",
-    "typescript": "^5.6.3",
-    "vitest": "^2.1.4"
+    "@hypernym/bundler": "^0.14.2",
+    "@hypernym/eslint-config": "^3.5.6",
+    "@hypernym/prettier-config": "^3.2.2",
+    "@hypernym/tsconfig": "^2.5.0",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.1",
+    "prettier": "^3.5.1",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
   }
 }
