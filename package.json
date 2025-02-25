@@ -10,11 +10,11 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.mts",
+      "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs"
     },
     "./fs": {
-      "types": "./dist/types/fs/index.d.mts",
+      "types": "./dist/fs/index.d.mts",
       "import": "./dist/fs/index.mjs"
     }
   },
@@ -44,8 +44,7 @@
     "format": "prettier --write .",
     "prepublishOnly": "npm run build"
   },
-  "sideEffects": false,
-  "packageManager": "pnpm@10.4.0",
+  "packageManager": "pnpm@10.5.0",
   "engines": {
     "node": ">=20.0.0",
     "pnpm": ">=9.0.0"
@@ -63,14 +62,14 @@
     }
   },
   "devDependencies": {
-    "@hypernym/bundler": "^0.14.2",
-    "@hypernym/eslint-config": "^3.5.6",
-    "@hypernym/prettier-config": "^3.2.2",
-    "@hypernym/tsconfig": "^2.5.0",
-    "@types/node": "^22.13.4",
-    "eslint": "^9.20.1",
-    "prettier": "^3.5.1",
+    "@hypernym/bundler": "^0.14.3",
+    "@hypernym/eslint-config": "^3.5.7",
+    "@hypernym/prettier-config": "^3.2.3",
+    "@hypernym/tsconfig": "^2.6.0",
+    "@types/node": "^22.13.5",
+    "eslint": "^9.21.0",
+    "prettier": "^3.5.2",
     "typescript": "^5.7.3",
-    "vitest": "^3.0.5"
+    "vitest": "^3.0.7"
   }
 }
