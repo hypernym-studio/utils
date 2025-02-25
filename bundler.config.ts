@@ -22,12 +22,12 @@ export default defineConfig({
       name: 'Hyperutils',
       minify: true,
     },
-    { dts: './src/types/index.ts' },
+    { dts: './src/types/index.ts', output: './dist/index.d.mts' },
     {
       input: './src/fs/index.ts',
       externals: [/^node/, /^@/],
       paths: resolvePaths([{ find: /^@/, replacement: '../index.mjs' }]),
     },
-    { dts: './src/types/fs/index.ts' },
+    { dts: './src/types/fs/index.ts', output: './dist/fs/index.d.mts' },
   ],
 })
