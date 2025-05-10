@@ -1,4 +1,4 @@
-<h1 align="center">Utils</h1>
+<h1 align="center">@hypernym/utils</h1>
 
 <p align="center">A collection of reusable utilities.</p>
 
