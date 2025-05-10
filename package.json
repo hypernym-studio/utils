@@ -4,7 +4,10 @@
   "author": "Hypernym Studio",
   "description": "A collection of reusable utilities.",
   "license": "MIT",
-  "repository": "hypernym-studio/utils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypernym-studio/utils.git"
+  },
   "homepage": "https://github.com/hypernym-studio/utils",
   "funding": "https://github.com/sponsors/ivodolenc",
   "type": "module",
@@ -44,11 +47,6 @@
     "format": "prettier --write .",
     "prepublishOnly": "npm run build"
   },
-  "packageManager": "pnpm@10.5.0",
-  "engines": {
-    "node": ">=20.0.0",
-    "pnpm": ">=9.0.0"
-  },
   "peerDependencies": {
     "@types/node": ">=20.0.0",
     "typescript": ">=5.0.0"
@@ -63,13 +61,13 @@
   },
   "devDependencies": {
     "@hypernym/bundler": "^0.14.3",
-    "@hypernym/eslint-config": "^3.5.7",
-    "@hypernym/prettier-config": "^3.2.3",
-    "@hypernym/tsconfig": "^2.6.0",
-    "@types/node": "^22.13.5",
-    "eslint": "^9.21.0",
-    "prettier": "^3.5.2",
-    "typescript": "^5.7.3",
-    "vitest": "^3.0.7"
+    "@hypernym/eslint-config": "^3.6.1",
+    "@hypernym/prettier-config": "^3.2.4",
+    "@hypernym/tsconfig": "^2.6.1",
+    "@types/node": "^22.15.17",
+    "eslint": "^9.26.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
   }
 }
