@@ -13,6 +13,17 @@ type RequiredOptions = {
  * Constructs a type by recursively setting all properties as required.
  *
  * Use `Required<T>` for one level.
+ *
+ * @example
+ *
+ * ```ts
+ * import type { RequiredDeep } from '@hypernym/utils'
+ *
+ * type RequiredObject = RequiredDeep<Object>
+ *
+ * // Disables recursive mode for arrays and tuples.
+ * type RequiredObject = RequiredDeep<Object, { arrays: false }>
+ * ```
  */
 export type RequiredDeep<
   T,

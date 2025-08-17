@@ -22,7 +22,7 @@ export const isBrowser = typeof window !== 'undefined'
  * ```ts
  * import { isNull } from '@hypernym/utils'
  *
- * isNull(null) // => true
+ * isNull(null) // true
  * ```
  */
 export const isNull = (v: any): v is null => v === null
@@ -35,7 +35,7 @@ export const isNull = (v: any): v is null => v === null
  * ```ts
  * import { isUndefined } from '@hypernym/utils'
  *
- * isUndefined(undefined) // => true
+ * isUndefined(undefined) // true
  * ```
  */
 export const isUndefined = (v: any): v is undefined => typeof v === 'undefined'
@@ -48,7 +48,7 @@ export const isUndefined = (v: any): v is undefined => typeof v === 'undefined'
  * ```ts
  * import { isString } from '@hypernym/utils'
  *
- * isString('@hypernym/utils') // => true
+ * isString('@hypernym/utils') // true
  * ```
  */
 export const isString = (v: any): v is string => typeof v === 'string'
@@ -61,7 +61,7 @@ export const isString = (v: any): v is string => typeof v === 'string'
  * ```ts
  * import { isStringEmpty } from '@hypernym/utils'
  *
- * isStringEmpty('') // => true
+ * isStringEmpty('') // true
  * ```
  */
 export const isStringEmpty = (v: any): v is string =>
@@ -75,7 +75,7 @@ export const isStringEmpty = (v: any): v is string =>
  * ```ts
  * import { isBoolean } from '@hypernym/utils'
  *
- * isBoolean(true) // => true
+ * isBoolean(true) // true
  * ```
  */
 export const isBoolean = (v: any): v is boolean => typeof v === 'boolean'
@@ -88,7 +88,7 @@ export const isBoolean = (v: any): v is boolean => typeof v === 'boolean'
  * ```ts
  * import { isTrue } from '@hypernym/utils'
  *
- * isTrue(true) // => true
+ * isTrue(true) // true
  * ```
  */
 export const isTrue = (v: any): v is true => v === true
@@ -101,7 +101,7 @@ export const isTrue = (v: any): v is true => v === true
  * ```ts
  * import { isFalse } from '@hypernym/utils'
  *
- * isFalse(false) // => true
+ * isFalse(false) // true
  * ```
  */
 export const isFalse = (v: any): v is false => v === false
@@ -114,7 +114,7 @@ export const isFalse = (v: any): v is false => v === false
  * ```ts
  * import { isNumber } from '@hypernym/utils'
  *
- * isNumber(33) // => true
+ * isNumber(33) // true
  * ```
  */
 export const isNumber = (v: any): v is number =>
@@ -128,7 +128,7 @@ export const isNumber = (v: any): v is number =>
  * ```ts
  * import { isArray } from '@hypernym/utils'
  *
- * isArray([]) // => true
+ * isArray([]) // true
  * ```
  */
 export const isArray = (v: any): v is any[] => Array.isArray(v)
@@ -141,7 +141,7 @@ export const isArray = (v: any): v is any[] => Array.isArray(v)
  * ```ts
  * import { isArrayEmpty } from '@hypernym/utils'
  *
- * isArrayEmpty([]) // => true
+ * isArrayEmpty([]) // true
  * ```
  */
 export const isArrayEmpty = (v: any): v is any[] => isArray(v) && v.length === 0
@@ -154,7 +154,7 @@ export const isArrayEmpty = (v: any): v is any[] => isArray(v) && v.length === 0
  * ```ts
  * import { isObject } from '@hypernym/utils'
  *
- * isObject({}) // => true
+ * isObject({}) // true
  * ```
  */
 export const isObject = (v: any): v is object => toString(v) === 'Object'
@@ -167,7 +167,7 @@ export const isObject = (v: any): v is object => toString(v) === 'Object'
  * ```ts
  * import { isObjectEmpty } from '@hypernym/utils'
  *
- * isObjectEmpty({}) // => true
+ * isObjectEmpty({}) // true
  * ```
  */
 export const isObjectEmpty = (v: any): v is object =>
@@ -181,7 +181,7 @@ export const isObjectEmpty = (v: any): v is object =>
  * ```ts
  * import { isFunction } from '@hypernym/utils'
  *
- * isFunction(() => {}) // => true
+ * isFunction(() => {}) // true
  * ```
  */
 export const isFunction = (v: any): v is (...args: any[]) => unknown =>
@@ -195,7 +195,7 @@ export const isFunction = (v: any): v is (...args: any[]) => unknown =>
  * ```ts
  * import { isNaNValue } from '@hypernym/utils'
  *
- * isNaNValue(NaN) // => true
+ * isNaNValue(NaN) // true
  * ```
  */
 export const isNaNValue = (v: any): v is typeof NaN =>
@@ -209,7 +209,7 @@ export const isNaNValue = (v: any): v is typeof NaN =>
  * ```ts
  * import { isRegExp } from '@hypernym/utils'
  *
- * isRegExp(/^hypernym/) // => true
+ * isRegExp(/^hypernym/) // true
  * ```
  */
 export const isRegExp = (v: any): v is RegExp => v instanceof RegExp
@@ -222,7 +222,7 @@ export const isRegExp = (v: any): v is RegExp => v instanceof RegExp
  * ```ts
  * import { isMap } from '@hypernym/utils'
  *
- * isMap(new Map()) // => true
+ * isMap(new Map()) // true
  * ```
  */
 export const isMap = (v: any): v is Map<any, any> => v instanceof Map
@@ -235,7 +235,7 @@ export const isMap = (v: any): v is Map<any, any> => v instanceof Map
  * ```ts
  * import { isWeakMap } from '@hypernym/utils'
  *
- * isWeakMap(new WeakMap()) // => true
+ * isWeakMap(new WeakMap()) // true
  * ```
  */
 export const isWeakMap = (v: any): v is WeakMap<any, any> =>
@@ -249,7 +249,7 @@ export const isWeakMap = (v: any): v is WeakMap<any, any> =>
  * ```ts
  * import { isSet } from '@hypernym/utils'
  *
- * isSet(new Set()) // => true
+ * isSet(new Set()) // true
  * ```
  */
 export const isSet = (v: any): v is Set<any> => v instanceof Set
@@ -262,7 +262,7 @@ export const isSet = (v: any): v is Set<any> => v instanceof Set
  * ```ts
  * import { isWeakSet } from '@hypernym/utils'
  *
- * isWeakSet(new WeakSet()) // => true
+ * isWeakSet(new WeakSet()) // true
  * ```
  */
 export const isWeakSet = (v: any): v is WeakSet<any> => v instanceof WeakSet
@@ -275,7 +275,7 @@ export const isWeakSet = (v: any): v is WeakSet<any> => v instanceof WeakSet
  * ```ts
  * import { isSymbol } from '@hypernym/utils'
  *
- * isSymbol(Symboly('hypernym')) // => true
+ * isSymbol(Symboly('hypernym')) // true
  * ```
  */
 export const isSymbol = (v: any): v is symbol => toString(v) === 'Symbol'
@@ -288,7 +288,7 @@ export const isSymbol = (v: any): v is symbol => toString(v) === 'Symbol'
  * ```ts
  * import { isDate } from '@hypernym/utils'
  *
- * isDate(new Date()) // => true
+ * isDate(new Date()) // true
  * ```
  */
 export const isDate = (v: any): v is Date =>
@@ -302,7 +302,7 @@ export const isDate = (v: any): v is Date =>
  * ```ts
  * import { isBigInt } from '@hypernym/utils'
  *
- * isBigInt(1n) // => true
+ * isBigInt(1n) // true
  * ```
  */
 export const isBigInt = (v: any): v is bigint => typeof v === 'bigint'
@@ -315,7 +315,7 @@ export const isBigInt = (v: any): v is bigint => typeof v === 'bigint'
  * ```ts
  * import { isInfinity } from '@hypernym/utils'
  *
- * isInfinity(Infinity) // => true
+ * isInfinity(Infinity) // true
  * ```
  */
 export const isInfinity = (v: any): v is number =>
@@ -329,7 +329,7 @@ export const isInfinity = (v: any): v is number =>
  * ```ts
  * import { isURL } from '@hypernym/utils'
  *
- * isURL(new URL('https://localhost:3000')) // => true
+ * isURL(new URL('https://localhost:3000')) // true
  * ```
  */
 export const isURL = (v: any): v is URL => v instanceof URL
@@ -342,7 +342,7 @@ export const isURL = (v: any): v is URL => v instanceof URL
  * ```ts
  * import { isError } from '@hypernym/utils'
  *
- * isError(new Error()) // => true
+ * isError(new Error()) // true
  * ```
  */
 export const isError = (v: any): v is Error => v instanceof Error
@@ -355,7 +355,7 @@ export const isError = (v: any): v is Error => v instanceof Error
  * ```ts
  * import { isPrimitive } from '@hypernym/utils'
  *
- * isPrimitive(true) // => true
+ * isPrimitive(true) // true
  * ```
  */
 export const isPrimitive = (v: any): v is Primitive =>
@@ -375,7 +375,7 @@ export const isPrimitive = (v: any): v is Primitive =>
  * ```ts
  * import { isElement } from '@hypernym/utils'
  *
- * isElement(el) // => true
+ * isElement(el) // true
  * ```
  */
 export const isElement = (v: any): v is Element => v instanceof Element
@@ -388,7 +388,7 @@ export const isElement = (v: any): v is Element => v instanceof Element
  * ```ts
  * import { isHtmlElement } from '@hypernym/utils'
  *
- * isHtmlElement(htmlEl) // => true
+ * isHtmlElement(htmlEl) // true
  * ```
  */
 export const isHtmlElement = (v: any): v is HTMLElement =>
@@ -402,7 +402,7 @@ export const isHtmlElement = (v: any): v is HTMLElement =>
  * ```ts
  * import { isSvgElement } from '@hypernym/utils'
  *
- * isSvgElement(svgEl) // => true
+ * isSvgElement(svgEl) // true
  * ```
  */
 export const isSvgElement = (v: any): v is SVGElement => v instanceof SVGElement
@@ -415,7 +415,7 @@ export const isSvgElement = (v: any): v is SVGElement => v instanceof SVGElement
  * ```ts
  * import { isNodeList } from '@hypernym/utils'
  *
- * isNodeList(document.querySelectorAll('div')) // => true
+ * isNodeList(document.querySelectorAll('div')) // true
  * ```
  */
 export const isNodeList = (v: any): v is NodeList => v instanceof NodeList
@@ -428,7 +428,7 @@ export const isNodeList = (v: any): v is NodeList => v instanceof NodeList
  * ```ts
  * import { isNodeListEmpty } from '@hypernym/utils'
  *
- * isNodeListEmpty(document.querySelectorAll('divs')) // => true
+ * isNodeListEmpty(document.querySelectorAll('divs')) // true
  * ```
  */
 export const isNodeListEmpty = (v: any): v is NodeList =>
@@ -442,7 +442,7 @@ export const isNodeListEmpty = (v: any): v is NodeList =>
  * ```ts
  * import { isHtmlCollection } from '@hypernym/utils'
  *
- * isHtmlCollection(document.getElementsByClassName('el')) // => true
+ * isHtmlCollection(document.getElementsByClassName('el')) // true
  * ```
  */
 export const isHtmlCollection = (v: any): v is HTMLCollection =>
@@ -454,7 +454,7 @@ export const isHtmlCollection = (v: any): v is HTMLCollection =>
  * ```ts
  * import { isHtmlCollectionEmpty } from '@hypernym/utils'
  *
- * isHtmlCollectionEmpty(document.getElementsByClassName('els')) // => true
+ * isHtmlCollectionEmpty(document.getElementsByClassName('els')) // true
  * ```
  */
 export const isHtmlCollectionEmpty = (v: any): v is HTMLCollection =>

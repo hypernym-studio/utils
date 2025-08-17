@@ -19,7 +19,7 @@ export const noop = (): void => {}
  * ```ts
  * import { toString } from '@hypernym/utils'
  *
- * toString({}) // => 'Object'
+ * toString({}) // 'Object'
  * ```
  */
 export const toString = (v: any): string =>

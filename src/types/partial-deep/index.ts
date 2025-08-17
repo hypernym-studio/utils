@@ -13,6 +13,17 @@ type PartialOptions = {
  * Constructs a type by recursively setting all properties as optional.
  *
  * Use `Partial<T>` for one level.
+ *
+ * @example
+ *
+ * ```ts
+ * import type { PartialDeep } from '@hypernym/utils'
+ *
+ * type PartialObject = PartialDeep<Object>
+ *
+ * // Disables recursive mode for arrays and tuples.
+ * type PartialObject = PartialDeep<Object, { arrays: false }>
+ * ```
  */
 export type PartialDeep<
   T,
