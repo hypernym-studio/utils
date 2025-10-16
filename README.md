@@ -48,7 +48,7 @@ Also, it is possible to download files manually and serve them accordingly.
 
 ```html
 <script type="module">
-  import { isNull, isString, ... } from 'https://unpkg.com/@hypernym/utils/dist/index.min.mjs'
+  import { isNull, isString, ... } from 'https://unpkg.com/@hypernym/utils/dist/index.min.js'
 </script>
 ```
 
