@@ -25,10 +25,13 @@
     "dist"
   ],
   "keywords": [
+    "hyper",
+    "hypernym",
     "javascript",
     "typescript",
     "collection",
     "utilities",
+    "shareable",
     "helpers",
     "shared",
     "utils",
@@ -42,9 +45,8 @@
     "dev:server": "bun --watch playgrounds/server/main.ts",
     "build": "hyperbundler",
     "test": "vitest -c test/vitest.config.ts",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "format": "prettier --write .",
+    "lint": "oxlint",
+    "format": "oxfmt",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
@@ -60,14 +62,13 @@
     }
   },
   "devDependencies": {
-    "@hypernym/bundler": "^0.31.1",
-    "@hypernym/eslint-config": "^3.6.7",
-    "@hypernym/prettier-config": "^3.2.11",
-    "@hypernym/tsconfig": "^2.6.5",
-    "@types/node": "^24.10.9",
-    "eslint": "^9.39.2",
-    "prettier": "^3.8.0",
+    "@hypernym/bundler": "^0.32.0",
+    "@hypernym/oxlint-config": "^0.1.0",
+    "@hypernym/tsconfig": "^2.7.0",
+    "@types/node": "^25.3.3",
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.51.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.17"
+    "vitest": "^4.0.18"
   }
 }
