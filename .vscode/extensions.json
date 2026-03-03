@@ -1,7 +1,6 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "prettier.prettier-vscode",
+    "oxc.oxc-vscode",
     "EditorConfig.EditorConfig",
     "hypernym-studio.hypernym-icons"
   ]
