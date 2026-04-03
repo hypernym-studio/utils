@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/@hypernym/changelog/dist/schema.json",
+  "enhance": {
+    "hash": true,
+    "PR": true
+  },
+  "authors": {
+    "Ivo Dolenc": {
+      "user": "ivodolenc",
+      "link": "https://github.com/ivodolenc"
+    }
+  }
+}
